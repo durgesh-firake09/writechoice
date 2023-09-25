@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import never_cache
 from .forms import ImageForm
 from .extract.prediction import predict
 import cv2
@@ -18,6 +19,7 @@ from django.conf import settings
 def index(request):
     return render(request,'index.html')
 
+@never_cache
 def ulogin(request):
      if request.method=='POST':
         username=request.POST.get('username')
@@ -55,7 +57,8 @@ def LogoutPage(request):
     return redirect('login')
 
 
- 
+@login_required(login_url='login') 
+@never_cache
 def upload(request):
    if request.method == "POST":
         form = ImageForm(request.POST, request.FILES)
