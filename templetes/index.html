@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" data-bs-theme=dark>
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minor Project</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <header>
 
@@ -35,7 +36,7 @@
     <div class="front">
       <!-- <a href="index.html"><img src="logo.png" ></a>
         <br> -->
-      <h1>WराईटHO<span class="pen-container"><img src="/static/img/pen.png" alt="Pen" class="pen-image"></span></span>CE
+      <h1>WराईटHO<span class="pen-container"><img src="{% static 'img/pen.png' %}" alt="Pen" class="pen-image"></span></span>CE
       </h1>
 
 
@@ -68,7 +69,7 @@
           </a>
       </div>
       <div class="box2">
-        <video src="/static/img/TWC.mp4" alt="The write choice video" controls autoplay loop muted></video>
+        <video src="/static_dev/img/TWC.mp4" alt="The write choice video" controls autoplay loop muted></video>
       </div>
     </div>
   </div>
@@ -80,7 +81,7 @@
     <div class="abt_container">
       <div class="column">
         <div class="col">
-          <img src="/static/img/nb.jpg">
+          <img src="/static_dev/img/nb.jpg">
           <br><br><br><br><br>
           <p>Experience the magic of handwriting analysis with just a few clicks.</p>
         </div>
@@ -88,14 +89,14 @@
 
       <div class="column">
         <div class="col">
-          <img src="/static/img/nb1.jpg">
+          <img src="/static_dev/img/nb1.jpg">
           <br><br><br><br><br>
           <p>Witness the fusion of age-old graphology and cutting-edge machine learning technology.</p>
         </div>
       </div>
       <div class="column">
         <div class="col">
-          <img src="/static/img/nb2.jpg">
+          <img src="/static_dev/img/nb2.jpg">
           <div class="col">
             <br><br><br><br>
             <p>Get ready to explore the fascinating world of your personality via your personal device.</p>
@@ -226,7 +227,7 @@
 
   </footer>
   <script src="https://kit.fontawesome.com/7f3af06922.js" crossorigin="anonymous"></script>
-  <script src="/static/index.js"></script>
+  <script src="/static_dev/index.js"></script>
 
 </body>
 

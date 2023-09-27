@@ -14,7 +14,7 @@ urlpatterns = [
        #path("home", views.index,name='home'),
        path("logout/", views.LogoutPage,name='logout'),
        path("upload/",views.upload, name="upload")
-] 
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
